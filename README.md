@@ -260,3 +260,6 @@ yay
 yay-debug
 zen-browser-bin
 ```
+## [SDDM Themes](https://github.com/Gonzalesderkaefer/sddm-theme)
+## [GRUB Theme](https://store.kde.org/p/2206118/)
+## [Powerlevel10k](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#for-new-users)
