@@ -1,0 +1,10 @@
+2025/08/24-20:22:48.192 4229 Reusing MANIFEST /home/choungion/.config/Microsoft/Microsoft Teams/Local Storage/leveldb/MANIFEST-000001
+2025/08/24-20:22:48.192 4229 Recovering log #4
+2025/08/24-20:22:48.205 4229 Level-0 table #7: started
+2025/08/24-20:22:48.211 4229 Level-0 table #7: 317865 bytes OK
+2025/08/24-20:22:48.217 4229 Delete type=0 #4
+2025/08/24-20:22:54.044 433d Level-0 table #10: started
+2025/08/24-20:22:54.047 433d Level-0 table #10: 276616 bytes OK
+2025/08/24-20:22:54.048 433d Delete type=0 #8
+2025/08/24-20:23:42.201 433d Level-0 table #12: started
+2025/08/24-20:23:42.207 433d Level-0 table #12: 590622 bytes OK

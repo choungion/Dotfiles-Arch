@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/choungion/.config/alacritty'
+let g:netrw_dirhist_4='/home/choungion/Downloads/dotfiles-main/.config/alacritty'
+let g:netrw_dirhist_3='/home/choungion/.config/hypr'
+let g:netrw_dirhist_2='/home/choungion/.config'
+let g:netrw_dirhist_1='/home/choungion/.config/scripts/FUApps'

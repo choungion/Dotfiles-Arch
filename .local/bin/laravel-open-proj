@@ -1,0 +1,93 @@
+#!/bin/bash
+# Open laravel dev env:
+# start editor, browser, VM, show logs, run queue, build frontend, open terminal
+# classes needed to pin windows on workspaces
+
+# first argument is project's dir
+PROJECT=$1
+# second is browser's profile dir, related to default config dir
+CHROME_PROFILE=$2
+
+ter() { # open terminal in project directory
+	$TERMINAL --working-directory="$PROJECT" "$@"
+}
+
+workspace() { # switch to workspace
+	if [ "$XDG_CURRENT_DESKTOP" == "i3" ]; then
+		i3-msg "workspace --no-auto-back-and-forth $1" > /dev/null
+	else
+		hyprctl dispatch workspace "$1" &
+	fi
+}
+
+move_to_workspace() { # move window to workspace
+	if [ "$XDG_CURRENT_DESKTOP" == "i3" ]; then
+		echo "Not implemented"
+	else
+		hyprctl dispatch focuswindow "$1"
+		hyprctl dispatch movetoworkspace "$2"
+	fi
+}
+
+raise() {
+	# run VM
+	ter --class='wp-5' --command ./vendor/bin/sail up -d
+
+	# open editor
+	ter --class='wp-4' --command nvim &
+
+	workspace 5
+	sleep 3
+
+	# run queue jobs
+	if [ -f "$PROJECT/ecosystem.config.cjs" ] && [ -f "$PROJECT/node_modules/.bin/pm2" ]; then
+		ter --class='wp-5' --command ./vendor/bin/sail bin '../../node_modules/.bin/pm2' restart ecosystem.config.cjs
+	else
+		ter --class='wp-5' --command ./vendor/bin/sail artisan schedule:run &
+	fi
+	# auto build frontend
+	ter --class='wp-5' --command ./vendor/bin/sail npm run dev &
+	sleep 3
+	# tail logs
+	ter --class='wp-5' --command tail -f storage/logs/laravel.log &
+
+	# switch workspaces
+	workspace 4 # first display
+	workspace 1 # second display
+
+	# run chrome
+	OZ=""
+	if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+		OZ="--ozone-platform=wayland"
+	fi
+	# check if --force-device-scale-factor is in ~/.local/share/applications/google-chrome.desktop if file exists
+	if [ -f ~/.local/share/applications/google-chrome.desktop ]; then
+		SCALE=$(grep -oP 'force-device-scale-factor=\K[0-9.]+' ~/.local/share/applications/google-chrome.desktop | head -1)
+		if [ -n "$SCALE" ]; then
+			OZ="$OZ --force-device-scale-factor=$SCALE"
+		fi
+	fi
+	google-chrome-stable $OZ \
+		--profile-directory="$CHROME_PROFILE" > /dev/null 2>&1 &
+	sleep 1
+	# open terminal
+	ter --class='wp-5' &
+
+	# move chrome to workspace 1
+	move_to_workspace google-chrome 1
+}
+
+CHROME_OPENED=$(pgrep -af "$CHROME_PROFILE" | grep -v "$0")
+TERMINAL_OPENED=$(pgrep -af " --class=wp-5")
+
+if [ -z "$CHROME_OPENED" ] && [ -z "$TERMINAL_OPENED" ]; then
+	echo "Starting..."
+	raise
+else
+	echo "Stopping..."
+	pkill -2 -f "$TERMINAL --working-directory=$PROJECT"
+	pkill -f "/opt/google/chrome/chrome" > /dev/null 2>&1
+	ter --class='wp-5' --command ./vendor/bin/sail down &
+fi
+
+disown

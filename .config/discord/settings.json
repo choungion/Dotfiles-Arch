@@ -1,0 +1,13 @@
+{
+  "BACKGROUND_COLOR": "#121214",
+  "offloadAdmControls": false,
+  "chromiumSwitches": {},
+  "IS_MAXIMIZED": false,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 1567,
+    "y": 48,
+    "width": 466,
+    "height": 503
+  }
+}

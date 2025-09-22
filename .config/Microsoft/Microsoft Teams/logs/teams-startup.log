@@ -1,0 +1,11 @@
+Error while parsing hooks JSON. Error: ENOENT: no such file or directory, open '/home/choungion/.config/Microsoft/Microsoft Teams/hooks.json'
+(node:1010) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(node:1010) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 ecsSettingsUpdated listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+(node:1010) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 appInitialized listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+Error occurred in handler for 'setSelectedAudioOutputDevice': TypeError: Cannot read property 'framesInSubtree' of undefined
+    at an (/usr/share/teams/resources/app.asar/main.bundle.js:1:256138)
+    at Object.t.sendToAllFramesOfAllWebContents (/usr/share/teams/resources/app.asar/main.bundle.js:1:268598)
+    at /usr/share/teams/resources/app.asar/main.bundle.js:235:768895
+    at electron/js2c/browser_init.js:197:558
+    at WebContents.<anonymous> (electron/js2c/browser_init.js:161:8803)
+    at WebContents.emit (events.js:310:20)

@@ -1,0 +1,15 @@
+2025/08/25-01:17:59.674 4cc Reusing MANIFEST /home/choungion/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/25-01:17:59.675 4cc Recovering log #10
+2025/08/25-01:17:59.680 4cc Reusing old log /home/choungion/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000010.log 
+2025/08/25-01:18:03.293 65c Level-0 table #15: started
+2025/08/25-01:18:03.297 65c Level-0 table #15: 144231 bytes OK
+2025/08/25-01:18:03.302 65c Delete type=0 #10
+2025/08/25-01:18:03.302 65c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2025/08/25-01:18:03.302 65c Manual compaction at level-1 from (begin) .. (end); will stop at '\x007\x02\x1f\x01\x10\x000\x000\x000\x001\x007\x005\x005\x004\x008\x003\x004\x007\x009\x003\x000\x001\x00\x01\x0b\x005\x002\x008\x009\x008\x006\x005\x002\x006\x000\x002' @ 26801 : 1
+2025/08/25-01:18:03.302 65c Compacting 1@1 + 1@2 files
+2025/08/25-01:18:03.323 65c Generated table #16@1: 6132 keys, 1205189 bytes
+2025/08/25-01:18:03.323 65c Compacted 1@1 + 1@2 files => 1205189 bytes
+2025/08/25-01:18:03.326 65c compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/08/25-01:18:03.326 65c Delete type=2 #12
+2025/08/25-01:18:03.326 65c Delete type=2 #15
+2025/08/25-01:18:03.327 65c Manual compaction at level-1 from '\x007\x02\x1f\x01\x10\x000\x000\x000\x001\x007\x005\x005\x004\x008\x003\x004\x007\x009\x003\x000\x001\x00\x01\x0b\x005\x002\x008\x009\x008\x006\x005\x002\x006\x000\x002' @ 26801 : 1 .. (end); will stop at (end)

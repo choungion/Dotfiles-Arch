@@ -1,0 +1,32 @@
+#!/bin/zsh
+TARGET="area"
+if [[ "$1" == "screen" ]]; then
+  TARGET=$1
+fi
+
+# filename available in the /tmp (without timezone leak)
+FNAME=$(python -c 'import os;import time; print(os.path.join("/tmp",time.strftime("%Y-%m-%d-%H-%M-%S")))')
+
+dir=~/Pictures/Screenshots
+
+# Check if the directory exists and create it if not
+mkdir -p "${dir}"
+
+# Check for a pre-existing file and append a number if necessary
+# First, remove any number from a previous run to start fresh
+base_name=$(basename "${FNAME}")
+num=1
+
+while [ -e "${dir}/${base_name}.png" ]; do
+  base_name="${base_name}-${num}"
+  num=$((num+1))
+done
+
+# The full path to the final filename
+FINAL_FNAME="${dir}/${base_name}.png"
+
+# put filename to the clipboard history
+wl-copy "${FINAL_FNAME}"
+
+# take screenshot and copy image data to clipboard
+grimblast --notify copysave "$TARGET" "${FINAL_FNAME}"

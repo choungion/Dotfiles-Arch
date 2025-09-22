@@ -1,0 +1,47 @@
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:29:11,773 | Running DaVinci Resolve v20.2.0.0013 (Linux/Clang x86_64)
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:29:11,773 | BMD_BUILD_UUID a10f13c7-c36f-4734-bb49-b6804d26f622
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:29:11,773 | BMD_GIT_COMMIT bb995087a5a5b52e57afba416e3bc706c66863f1
+0x7f3e86726000 | GPUDetect            | INFO  | 2025-09-19 23:29:11,773 | Starting GPUDetect 1.2_9-a4
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:29:11,820 | Caught termination signal SIGINT, triggering termination routine
+
+
+==========[CRASH DUMP]==========
+#TIME Fri Sep 19 23:29:11 2025 - Uptime 00:00:00 (hh:mm:ss)
+#PROGRAM_NAME DaVinci Resolve v20.2.0.0013 (Linux/Clang x86_64)
+#BMD_ARCHITECTURE x86_64
+#BMD_BUILD_UUID a10f13c7-c36f-4734-bb49-b6804d26f622
+#BMD_GIT_COMMIT bb995087a5a5b52e57afba416e3bc706c66863f1
+#BMD_UTIL_VERSION 20.2.0.0013
+#OS Linux
+
+davinci-resolve() [0x5edcd99]
+davinci-resolve() [0x34ba6ef]
+/usr/lib/libc.so.6(+0x3e540) [0x7f3e7563e540]
+/usr/lib/libc.so.6(ioctl+0x3d) [0x7f3e7571674d]
+/usr/lib/libcuda.so.1(+0x48d6c8) [0x7f3e2fc8d6c8]
+/usr/lib/libcuda.so.1(+0x47ca21) [0x7f3e2fc7ca21]
+/usr/lib/libcuda.so.1(+0x46801b) [0x7f3e2fc6801b]
+/usr/lib/libcuda.so.1(+0x3260d5) [0x7f3e2fb260d5]
+/usr/lib/libcuda.so.1(+0x47ecf9) [0x7f3e2fc7ecf9]
+/usr/lib/libcuda.so.1(+0xf5553d) [0x7f3e3075553d]
+/usr/lib/libcuda.so.1(+0x2d48de) [0x7f3e2fad48de]
+/usr/lib/libcuda.so.1(+0x314152) [0x7f3e2fb14152]
+/usr/lib/libcuda.so.1(cuInit+0x20) [0x7f3e2fb05930]
+/opt/resolve/bin/../libs/libgpudetect.so(+0x42252) [0x7f3eb4997252]
+/opt/resolve/bin/../libs/libgpudetect.so(+0x41fda) [0x7f3eb4996fda]
+/opt/resolve/bin/../libs/libgpudetect.so(+0x4d7cd) [0x7f3eb49a27cd]
+/opt/resolve/bin/../libs/libgpudetect.so(+0xb626) [0x7f3eb4960626]
+/opt/resolve/bin/../libs/libgpudetect.so(+0xb1c4) [0x7f3eb49601c4]
+davinci-resolve() [0x34bf649]
+davinci-resolve() [0x34b951e]
+/usr/lib/libc.so.6(+0x27675) [0x7f3e75627675]
+/usr/lib/libc.so.6(__libc_start_main+0x89) [0x7f3e75627729]
+davinci-resolve() [0x34b7e4e]
+Signal Number = 2
+
+================================
+0x7f3e277ff000 | Main                 | INFO  | 2025-09-19 23:29:17,186 | Caught termination signal SIGINT, triggering termination routine
+0x7f3e277ff000 | Main                 | INFO  | 2025-09-19 23:29:17,548 | Caught termination signal SIGINT, triggering termination routine
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:46:22,939 | Caught termination signal SIGTERM, triggering termination routine
+0x7f3e277ff000 | Main                 | INFO  | 2025-09-19 23:46:29,640 | Caught termination signal SIGTERM, triggering termination routine
+0x7f3e86726000 | Main                 | INFO  | 2025-09-19 23:48:43,145 | Caught termination signal SIGTERM, triggering termination routine
