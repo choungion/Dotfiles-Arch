@@ -37,7 +37,7 @@ PATH="/home/choungion/perl5/bin${PATH:+:${PATH}}"; export PATH;
 #PERL_MM_OPT="INSTALL_BASE=/home/choungion/perl5"; export PERL_MM_OPT;
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.git/.git --work-tree=$HOME'
-alias update-dotfiles='dotfiles commit -am "Update" && dotfiles push -u origin main'
+alias update-dotfiles='dotfiles add . && dotfiles commit -m "Update" && dotfiles push origin main'
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall

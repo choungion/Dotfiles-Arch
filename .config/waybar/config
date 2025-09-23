@@ -7,9 +7,9 @@
     "spacing": 4, // Gaps between modules (4px)
     "output":"DP-2", // Restrict bar to monitor
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "pulseaudio", "custom/updates"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["group/right"],
+    "modules-left": ["hyprland/workspaces", "pulseaudio"],
+    //"modules-center": ["hyprland/window"],
+    "modules-right": ["custom/updates", "cpu", "memory", "tray", "clock"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -36,7 +36,7 @@
             "cpu",
             "memory",
             "tray",
-            "clock"
+            "clock" 
 		]
 	},
     "keyboard-state": {
@@ -89,20 +89,27 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 20,
         "spacing": 2
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        // "timezone": "America/Costa_Rica",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
+		"calendar": {
+            		"mode": "month",
+            		"format": {
+                		"today": "<span color='#ecd3a0'><b><u>{}</u></b></span>"
+			}
+		}
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+	"on-click": "~/.config/hypr/scripts/monitor.sh"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"on-click": "~/.config/hypr/scripts/monitor.sh"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -183,7 +190,7 @@
         "escape": true
     },
     "custom/updates": {
-        "format": "{} {icon}",
+        "format": "{icon}",
         "return-type": "json",
         "format-icons": {
             "has-updates": "󱍷",
@@ -203,8 +210,8 @@
     "output":"DP-1", // Restrict bar to monitor
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/submap", "tray", "clock"],
+    //"modules-center": ["hyprland/window"],
+    "modules-right": ["custom/updates", "hyprland/submap", "tray", "clock"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -275,21 +282,29 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 20,
         "spacing": 0
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        // "timezone": "America/Costa_Rica",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
+		"calendar": {
+            		"mode": "month",
+            		"format": {
+                		"today": "<span color='#ecd3a0'><b><u>{}</u></b></span>"
+			}
+		}
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+	"on-click": "~/.config/hypr/scripts/monitor.sh"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"on-click": "~/.config/hypr/scripts/monitor.sh"
     },
+
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -369,7 +384,7 @@
         "escape": true
     },
     "custom/updates": {
-        "format": "{} {icon}",
+        "format": "{icon}",
         "return-type": "json",
         "format-icons": {
             "has-updates": "󱍷",

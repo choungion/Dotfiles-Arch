@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
+  font-size: 20px;
   background-color: transparent;
 }
 
@@ -79,10 +79,19 @@ window#waybar.hidden {
 #clock,
 #cpu,
 #memory,
+/*#custom-updates,*/
 .modules-right,
-.modules-left{
+.modules-left {
   padding: 0 10px;
   color: #e5e5e5;
+  /* color: #bf616a; */
+  border: 1px solid #1f2530;
+  border-radius: 8px;
+  background-color: #1f2530;
+}
+#custom-updates {
+  padding: 0 10px;
+  color: #A3BE8C;
   /* color: #bf616a; */
   border: 1px solid #1f2530;
   border-radius: 8px;
@@ -180,8 +189,14 @@ window#waybar.hidden {
 
 #clock {
   color: #c8d2e0;
-  /* background-color: #14141e; */
+  /* background-color: #14141e; */ 
 }
+tooltip {
+  background-color: #1f2530;
+  color: white;
+  padding: 0px;
+}
+
 
 #battery {
   color: #c0caf5;
@@ -263,9 +278,14 @@ label:focus {
 #temperature.critical {
   background-color: #eb4d4b;
 }
+#tray menu {
+    background-color: #1f2530;
+    color: white;
+    padding: 0 0px;
+}
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim; 
 }
 
 #tray > .needs-attention {

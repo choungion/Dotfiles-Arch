@@ -1,4 +1,5 @@
 .cache
+.cargo
 .config/nvm/
 .config/equibop
 .config/tidal-hifi
