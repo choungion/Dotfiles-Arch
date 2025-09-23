@@ -10,7 +10,7 @@ NVTOP_PID=$!
 
 # Wait for either process to terminate
 while ps -p $HTOP_PID > /dev/null && ps -p $NVTOP_PID > /dev/null; do
-    sleep 0.5
+	sleep 0
 done
 
 # If htop is no longer running, kill nvtop

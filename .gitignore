@@ -2,6 +2,7 @@
 .cargo
 .config/nvm/
 .config/equibop
+.config/teams-for-linux/
 .config/tidal-hifi
 .config/VSCodium
 .electron-gyp/
