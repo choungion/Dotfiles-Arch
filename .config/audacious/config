@@ -1,0 +1,7 @@
+
+[audgui]
+filesel_path=/home/2TB/Music
+
+[qtui]
+player_height=1034
+player_width=948

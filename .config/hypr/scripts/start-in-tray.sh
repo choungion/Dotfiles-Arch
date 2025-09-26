@@ -22,7 +22,7 @@ equibop &
 kdeconnect-indicator &
 sleep 2
 
-tidal-hifi &
+tauon &
 steam &
 nm-applet --indicator &
 XDG_CURRENT_DESKTOP=gnome 

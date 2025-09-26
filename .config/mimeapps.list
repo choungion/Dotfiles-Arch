@@ -32,3 +32,4 @@ x-scheme-handler/mailto=userapp-Thunderbird-T3YUC3.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-T3YUC3.desktop;
 video/x-matroska=mpv.desktop;
 application/pdf=okularApplication_pdf.desktop;
+audio/flac=tauonmb.desktop;

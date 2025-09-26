@@ -1,0 +1,16 @@
+[ElisaFileIndexer]
+RootPath[$e]=/home/2TB/Music
+
+[PlayerSettings]
+ShowSystemTrayIcon=true
+
+[Playlist]
+AlwaysUseAbsolutePlaylistPaths=true
+
+[UiSettings]
+ColorScheme=Kvantum
+
+[Views]
+EmbeddedView=AllArtists
+InitialFilesViewPath=/home/2TB/Music
+InitialView=AllTracks

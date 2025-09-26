@@ -1,0 +1,6 @@
+2025-09-24T00:38:56 exception: Failed to open "/home/choungion/.config/mpd/state": No such file or directory
+2025-09-24T00:39:52 exception: Failed to open "/home/choungion/.config/mpd/state": No such file or directory
+2025-09-24T00:40:07 exception: Failed to open "/home/choungion/.config/mpd/state": No such file or directory
+2025-09-24T00:48:44 exception: Failed to open "/home/choungion/.config/mpd/state": No such file or directory
+2025-09-24T01:04:05 exception: Failed to open "/home/choungion/.config/mpd/state": No such file or directory
+2025-09-24T01:06:59 mixer: Failed to read mixer for "default detected output": no such mixer control: PCM
