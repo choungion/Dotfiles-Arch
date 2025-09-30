@@ -1,10 +1,20 @@
 .cache
 .cargo
 .config/nvm/
+.config/antimicrox
+.config/dconf
 .config/equibop
+.config/kde.org
+.config/libreoffice
+.config/session
 .config/teams-for-linux/
+.config/Thunar
 .config/tidal-hifi
+.config/unity3d
+.config/VirtualBox
 .config/VSCodium
+.config/qBittorrent
+.config/QtProject
 .electron-gyp/
 .factorio/
 .fehbg
@@ -21,10 +31,13 @@
 .local/share/gvfs-metadata
 .local/share/hyprland
 .local/share/kpeoplevcard
+.local/share/Larian Studios/
 .local/share/mime
 .local/share/nvim
+.local/share/qBittorrent
 .local/share/recently-used.xbel
 .local/share/Steam
+.local/share/Trash
 .local/share/user-places.xbel
 .local/share/user-places.xbel.bak
 .local/share/user-places.xbel.tbcache
