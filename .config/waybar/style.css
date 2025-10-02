@@ -1,17 +1,17 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 20px;
+  font-size: 17px;
   background-color: transparent;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: #1f2530;
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border-top: 8px transparent;
-  border-radius: 8px;
+  border-top: 0px transparent;
+  border-radius: 0px;
   transition-duration: 0.5s;
   margin: 16px 16px;
 }
@@ -22,13 +22,13 @@ window#waybar.hidden {
 
 #workspaces button {
   padding: 0 5px;
-  color: #7984A4;
-  background-color: transparent;
+  color: #a8c0cc;
+  background-color: #1E1E1E;
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
   /* Avoid rounded borders under each workspace name */
   border: none;
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 #workspaces button.focused {
@@ -37,10 +37,13 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #6a92d7;
+  background-color: #3A4350;
+  border-radius: 8px;
 }
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
+  border-radius: 10px;
 }
 
 #window {
@@ -57,7 +60,7 @@ window#waybar.hidden {
 #network,
 #pulseaudio,
 #custom-media,
-#tray,
+
 #mode,
 #idle_inhibitor,
 #mpd,
@@ -89,20 +92,12 @@ window#waybar.hidden {
   border-radius: 8px;
   background-color: #1f2530;
 }
-#custom-updates {
-  padding: 0 10px;
-  color: #A3BE8C;
-  /* color: #bf616a; */
-  border: 1px solid #1f2530;
-  border-radius: 8px;
-  background-color: #1f2530;
-}
 
 #window,
 #workspaces {
-  margin: 0 4px;
-  border-radius: 7.8px;
-  background-color: #1f2530;
+  margin: 4px 10px;
+  border-radius: 12px;
+  background-color: #1E1E1E;
 }
 
 #cpu {
@@ -110,54 +105,19 @@ window#waybar.hidden {
   background-color: #1f2530;
 }
 
-#memory {
-  color: #ebcb8b;
-  background-color: #1f2530;
+#custom-logo {
+  color: #88C0D0;
+  margin: 3px 1px;
+  border-radius: 8px;
+  min-width: 27px; 
+  background-color: #1E1E1E
 }
-
-#custom-power-menu {
-  border-radius: 9.5px;
-  background-color: #1b242b;
-  border-radius: 7.5px;
-  padding: 0 5px;
-}
-
-#custom-launcher {
-  background-color: #1b242b;
-  color: #6a92d7;
-  border-radius: 7.5px;
-  padding: 0 3px;
-}
-
-#custom-weather.severe {
-  color: #eb937d;
-}
-
-#custom-weather.sunnyDay {
-  color: #c2ca76;
-}
-
-#custom-weather.clearNight {
-  color: #cad3f5;
-}
-
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight {
-  color: #c2ddda;
-}
-
-#custom-weather.rainyDay,
-#custom-weather.rainyNight {
-  color: #5aaca5;
-}
-
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight {
-  color: #d6e7e5;
-}
-
-#custom-weather.default {
-  color: #dbd9d8;
+#custom-media {
+  color: #c8d2e0;
+  margin: 3px 1px;
+  border-radius: 8px;
+  min-width: 27px; 
+  background-color: #1E1E1E
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -170,26 +130,19 @@ window#waybar.hidden {
   margin-right: 0;
 }
 
-#pulseaudio {
-  color: #7d9bba;
-}
 
-#custom-mic {
-  color: #7d9bba;
-  border-radius: 9.5px;
-  background-color: #1b242b;
-  border-radius: 7.5px;
-  padding: 0 5px;
-}
-
-#backlight {
-  /* color: #EBCB8B; */
-  color: #8fbcbb;
+#tray {
+  color: #c8d2e0;
+  margin: 3px 1px;
+  border-radius: 8px;
+  background-color: #1E1E1E
 }
 
 #clock {
   color: #c8d2e0;
-  /* background-color: #14141e; */ 
+  margin: 3px 1px;
+  border-radius: 8px;
+  background-color: #1E1E1E
 }
 tooltip {
   background-color: #1f2530;
@@ -257,31 +210,10 @@ label:focus {
   color: #f53c3c;
 }
 
-#custom-media {
-  background-color: #66cc99;
-  color: #2a5c45;
-  min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-  background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-  background-color: #ffa000;
-}
-
-#temperature {
-  background-color: #f0932b;
-}
-
-#temperature.critical {
-  background-color: #eb4d4b;
-}
 #tray menu {
-    background-color: #1f2530;
-    color: white;
-    padding: 0 0px;
+    margin: 4px 10px;
+  border-radius: 8px;
+  background-color: #1E1E1E
 }
 
 #tray > .passive {

@@ -1,0 +1,79 @@
+
+
+.volume-osd {
+   @include window;
+   background-color: #1F2530 ;
+   box-shadow: 0 0 0 0px black;
+   min-width: 25rem;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+.volume-control-center {
+    background-color: #1F2530 ;
+    margin-top: 1rem;
+}
+
+.volume-scale trough {
+    background-color: #d8dee9;
+    border-radius: 1rem;
+    min-height: 2.25rem;
+}
+
+
+.volume-scale trough highlight {
+    background-color: #81A1C1;
+    border-radius: 1rem;
+    min-height: 2.25rem;
+}
+
+.volume-icon {
+    margin-left: 0.75rem;
+    font-size: 1.5rem;
+
+    &.less {
+        color: #17130B;
+    };
+
+    &.more {
+        color: #17130B;
+    };
+}
+
+.volume-arrow {
+    color: #88C0D0;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    min-width: 2.25rem;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+.volume-arrow:hover {
+    background-color: #A8C0CC;
+}
+
+.volume-mute {
+    background-color: #d8dee9;
+    color: #17130B;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    min-width: 2.25rem;
+    border-radius: 2rem;
+    transition: 0.3s;
+
+    &.active {
+        background-color: #81A1C1;
+        color: $surface;
+    }
+
+    &.active:hover {
+        background-color: #d8dee9;
+    }
+}
+
+.volume-mute:hover {
+    background-color: #81A1C1;
+}

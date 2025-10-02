@@ -1,0 +1,32 @@
+
+.notifications-popup-body {
+    @include window;
+    min-width: 35rem;
+    border-radius: 2rem;
+    border: 0.2rem solid ;
+    box-shadow: 0 0 0px 0px #1F2530;
+    background-color: #1F2530;
+    color: #1F2530;
+    padding: 0rem;
+}
+.notify-edge {
+    background-color:#1F2530;
+    padding: 0px;
+    
+    border-radius: 1rem;
+    
+}
+.ncorner {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: 29px -25px 0px 0px #1F2530;
+
+    }
+  
+    &.right {
+      box-shadow: -29px -25px 0px 0px #1F2530;
+    }
+  }

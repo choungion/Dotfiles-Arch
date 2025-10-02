@@ -33,3 +33,5 @@ x-scheme-handler/mid=userapp-Thunderbird-T3YUC3.desktop;
 video/x-matroska=mpv.desktop;
 application/pdf=okularApplication_pdf.desktop;
 audio/flac=tauonmb.desktop;
+text/plain=libreoffice-writer.desktop;
+text/x-scss=libreoffice-writer.desktop;codium.desktop;

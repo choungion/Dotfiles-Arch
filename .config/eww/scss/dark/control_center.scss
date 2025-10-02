@@ -1,0 +1,14 @@
+@import "/home/choungion/.config/material-you/colors.scss";
+
+.control-center {
+    @include window;
+    box-shadow: 0 0 0 0rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-left: 1rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #1F2530;
+}

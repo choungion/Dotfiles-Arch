@@ -1,0 +1,71 @@
+.powermenu-box {
+    font-size: 0.00001rem;
+    box-shadow: 0 0 0 0px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.power {
+    font-size: 0.1rem;
+}
+
+.powermenu-entry {
+    margin: 0 0.5rem;
+}
+
+/* --- New Styles for Individual Button Colors --- */
+
+.power-off-button {
+    background-color: #A3BE8C;
+    transition: 0.3s;
+    padding: 0.1rem 0.4rem;
+    color: #DAFFE0;
+    border-radius: 30rem;
+}
+
+.reboot-button {
+    background-color: #EBCB8B;
+    transition: 0.3s;
+    padding: 0.1rem 0.4rem;
+    color: #FFFEE9;
+    border-radius: 30rem;
+}
+
+.sign-out-button {
+    background-color: #BF616A;
+    transition: 0.3s;
+    padding: 0.1rem 0.4rem;
+    color: $dark-primary;
+    border-radius: 30rem;
+}
+
+.power-off-button:hover {
+    background-color: #388e3c;
+}
+
+.reboot-button:hover {
+    background-color: #ffa000;
+}
+
+.sign-out-button:hover {
+    background-color: #c62828;
+}
+
+/* --- End of New Styles --- */
+
+.powermenu-icon {
+    font-size: 1.7rem;
+    margin-right: 0.5rem;
+}
+
+.powermenu-text {
+    margin-top: 0.1rem;
+    font-size: 0.1rem;
+    color: black;
+}

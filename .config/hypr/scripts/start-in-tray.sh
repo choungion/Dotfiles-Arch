@@ -11,19 +11,22 @@ waybar_loop() {
 		notify-send -a "start-in-tray.sh" "Waybar crashed!"
 		sleep 1
 	done
+
 }
 
-# wait for xdg-desktop-portal-hyprland to start
+ wait for xdg-desktop-portal-hyprland to start
+
 until pgrep -f 'xdg-desktop-portal-hyprland'; do sleep 2; done
 
 waybar_loop &
 
 equibop &
 kdeconnect-indicator &
-sleep 2
+sleep 3
 
 tauon &
 steam &
 nm-applet --indicator &
 XDG_CURRENT_DESKTOP=gnome 
 blueman-applet &
+waypaper --restore &

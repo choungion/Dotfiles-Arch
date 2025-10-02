@@ -1,0 +1,26 @@
+;; New Window for the Control Center
+(defwindow control_center_window2 :stacking "overlay"
+  :windowtype "utility"
+  :wm-ignore true
+  :monitor 1
+  :onfocus-lost "eww close control_center_window"
+  :geometry (geometry 
+    :x "-20px"             ; Distance from the left edge (20 pixels)
+    :y "-12.5px"            ; Distance from the bottom edge (20 pixels)
+    :width "36.6%"          ; Example width
+    :height "0%"         ; Example height
+    :anchor "bottom left" ; ANCHOR IS THE KEY CHANGE
+  )
+  (eventbox :orientation "v" 
+       :space-evenly false
+       :onhoverlost "eww close control_center_window2 && eww close corner-left2"
+    (box :orientation "v" 
+         :space-evenly false 
+         :class "control-center"
+      (notifications)
+    (user)
+      (volume_control_center)
+      (powermenu)
+    )
+  )
+)

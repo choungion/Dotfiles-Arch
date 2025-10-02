@@ -1,0 +1,31 @@
+(defwidget powermenu_entry [label icon onclick button-class]
+    (box :orientation "v" :space-evenly false :class "powermenu-entry"
+        (button :class "powermenu-button ${button-class}" :onclick {onclick}
+            (label :class "powermenu-icon" :text {icon})
+        )
+    )
+)
+
+(defwidget powermenu []
+    (box :orientation "h" :space-evenly true :valign "center" :halign "center" :class "powermenu-box"
+        (powermenu_entry
+            :label "Power off"
+            :icon "󰤆"
+            :onclick "systemctl poweroff"
+            :button-class "power-off-button"  ; <-- New unique class
+        )
+        (powermenu_entry
+            :label "Reboot"
+            :icon ""
+            :onclick "systemctl reboot"
+            :button-class "reboot-button"     ; <-- New unique class
+        )
+        (powermenu_entry
+            :label "Sign out"
+            :icon "󰗼"
+            :onclick "hyprctl dispatch exit 0"
+            :button-class "sign-out-button"   ; <-- New unique class
+        )
+            
+    )
+)

@@ -7,28 +7,53 @@
     "spacing": 4, // Gaps between modules (4px)
     "output":"DP-2", // Restrict bar to monitor
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "pulseaudio"],
-    //"modules-center": ["hyprland/window"],
-    "modules-right": ["custom/updates", "cpu", "memory", "tray", "clock"],
+    "modules-left": ["custom/logo", "hyprland/workspaces"],
+    "modules-center": ["custom/media"],
+    "modules-right": ["tray", "clock"],
     // Modules configuration
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+	    "on-click": "eww open --toggle control_center_window; eww open corner-left --toggle"
+    },
+
+    "custom/media": {
+        "format": "󰐎",
+        "tooltip": false,
+	    "on-click": "~/.config/hypr/scripts/monitor.sh"
+    },
+
      "hyprland/workspaces": {
          "disable-scroll": true,
          "on-click": "activate",
          // "all-outputs": false,
-         // "format": "{name}: {icon}",
-         "format": "{name}",
+         "format": "{icon}",
+         //"format": "{name}",
          "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
          "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
+             "1": "一",
+             "2": "二",
+             "3": "三",
+             "4": "四",
+             "5": "五",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "10": "十",
              "urgent": "",
              "focused": "",
              "default": ""
-         }
+         },
+	 "persistent-workspaces": {
+	    "1": [],
+	    "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": []
+        }
      },
     "group/right": {
         "orientation": "inherit",
@@ -93,14 +118,10 @@
         "spacing": 2
     },
     "clock": {
-        // "timezone": "America/Costa_Rica",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
-		"calendar": {
-            		"mode": "month",
-            		"format": {
-                		"today": "<span color='#ecd3a0'><b><u>{}</u></b></span>"
-			}
-		}
+        "timezone": "America/Costa_Rica",
+        "format": "{:%I:%M %p}",
+        "tooltip": false,
+        "on-click": "eww open --toggle calendar; eww open corner-right --toggle"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -110,36 +131,6 @@
     "memory": {
         "format": "{}% ",
 	"on-click": "~/.config/hypr/scripts/monitor.sh"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 🗲",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "network": {
         "interface": "wlan0", // (Optional) To force the use of this interface
@@ -209,28 +200,52 @@
     "spacing": 4, // Gaps between modules (4px)
     "output":"DP-1", // Restrict bar to monitor
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
-    //"modules-center": ["hyprland/window"],
-    "modules-right": ["custom/updates", "hyprland/submap", "tray", "clock"],
+    "modules-left": ["custom/logo", "hyprland/workspaces"],
+    "modules-center": ["custom/media"],
+    "modules-right": ["tray", "clock"],
     // Modules configuration
+
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+	    "on-click": "eww open control_center_window2 --toggle; eww open corner-left2 --toggle"
+    },
+
+    "custom/media": {
+        "format": "󰐎",
+        "tooltip": false,
+	    "on-click": "~/.config/hypr/scripts/monitor.sh"
+    },
+
      "hyprland/workspaces": {
          "disable-scroll": true,
          "on-click": "activate",
          // "all-outputs": false,
-         // "format": "{name}: {icon}",
-         "format": "{name}",
+         "format": "{icon}",
+         //"format": "{name}",
          "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
          "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
+             "1": "一",
+             "2": "二",
+             "3": "三",
+             "4": "四",
+             "5": "五",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "10": "十",
              "urgent": "",
              "focused": "",
              "default": ""
-         }
+         },
+         "persistent-workspaces": {
+	        "7": [],
+	        "8": [],
+            "9": [],
+            "10": []
+        }
      },
     "keyboard-state": {
         "numlock": false,
@@ -286,14 +301,10 @@
         "spacing": 0
     },
     "clock": {
-        // "timezone": "America/Costa_Rica",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", 
-		"calendar": {
-            		"mode": "month",
-            		"format": {
-                		"today": "<span color='#ecd3a0'><b><u>{}</u></b></span>"
-			}
-		}
+        "timezone": "America/Costa_Rica",
+        "format": "{:%I:%M %p}",
+        "tooltip": false,
+        "on-click": "eww open --toggle calendar2; eww open corner-right2 --toggle"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -304,37 +315,6 @@
         "format": "{}% ",
 	"on-click": "~/.config/hypr/scripts/monitor.sh"
     },
-
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 🗲",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
         "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ",
@@ -343,54 +323,5 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 10, // %, can be a float
-        "format": "{volume}%{icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{} {icon}",
-        "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span> ",
-            "none": "",
-            "dnd-notification": "<span foreground='red'><sup></sup></span> ",
-            "dnd-none": "",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span> ",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span> ",
-            "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "sleep 0.1 && swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
-    "custom/updates": {
-        "format": "{icon}",
-        "return-type": "json",
-        "format-icons": {
-            "has-updates": "󱍷",
-            "updated": "󰂪"
-        },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --tooltip-align-columns 'Source Code Pro' --color-semver-updates F15D22,FFCE51,73C48F,48B9C7,88807C"
     }
 }]
